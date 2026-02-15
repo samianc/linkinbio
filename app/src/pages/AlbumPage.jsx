@@ -42,7 +42,7 @@ function AlbumPage() {
       <AnimatedSection delay={200}>
         <Grid container spacing={3}>
           {filtered.map((album) => (
-            <Grid item xs={12} sm={6} md={4} key={album.id}>
+            <Grid item xs={12} sm={12} md={4} key={album.id}>
               <AlbumCard album={album} />
             </Grid>
           ))}

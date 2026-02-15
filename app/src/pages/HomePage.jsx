@@ -1,6 +1,5 @@
 import React from 'react'
-import { Box, Grid, Stack, Typography, Button } from '@mui/material'
-import { Link as RouterLink } from 'react-router-dom'
+import { Box, Stack } from '@mui/material'
 import Hero from '../components/Hero.jsx'
 import AnimatedSection from '../components/AnimatedSection.jsx'
 import AlbumCard from '../components/AlbumCard.jsx'
@@ -11,43 +10,24 @@ function HomePage() {
 
   return (
     <Stack spacing={{ xs: 4, md: 6 }}>
-      <Hero />
-
       <AnimatedSection delay={150}>
-        <Stack spacing={2} sx={{ mb: 2 }}>
-          <Typography variant="h2">Featured releases</Typography>
-          <Typography variant="body1" color="text.secondary">
-            Curated picks from the latest IV Room drops.
-          </Typography>
-        </Stack>
-        <Grid container spacing={3}>
-          {featured.map((album) => (
-            <Grid item xs={12} md={4} key={album.id}>
-              <AlbumCard album={album} />
-            </Grid>
-          ))}
-        </Grid>
-      </AnimatedSection>
-
-      <AnimatedSection delay={300}>
         <Box
           sx={{
-            p: { xs: 3, md: 4 },
-            borderRadius: 4,
-            border: '1px solid rgba(20, 17, 15, 0.08)',
-            background: 'rgba(255, 255, 255, 0.8)',
+            display: { xs: 'grid', md: 'grid' },
+            gap: 3,
+            gridTemplateColumns: { xs: '1fr', md: 'repeat(3, minmax(0, 1fr))' },
+            overflowX: 'visible',
+            pb: { xs: 1, md: 0 },
           }}
         >
-          <Stack spacing={2}>
-            <Typography variant="h3">Listen everywhere</Typography>
-            <Typography variant="body1" color="text.secondary">
-              Spotify, Apple Music, YouTube Music, and Soundcloud links are
-              available on every release.
-            </Typography>
-            <Button variant="contained" component={RouterLink} to="/albums">
-              View all albums
-            </Button>
-          </Stack>
+          {featured.map((album) => (
+            <Box
+              key={album.id}
+              sx={{}}
+            >
+              <AlbumCard album={album} />
+            </Box>
+          ))}
         </Box>
       </AnimatedSection>
     </Stack>

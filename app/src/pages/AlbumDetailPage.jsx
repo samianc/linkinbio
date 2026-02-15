@@ -8,6 +8,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material'
+import ReactMarkdown from 'react-markdown'
 import albums from '../data/albums.js'
 import LinkGrid from '../components/LinkGrid.jsx'
 import { formatYear } from '../utils/formatters.js'
@@ -35,20 +36,43 @@ function AlbumDetailPage() {
 
   return (
     <Stack spacing={{ xs: 3, md: 4 }}>
-      <Stack direction={{ xs: 'column', md: 'row' }} spacing={3}>
-        <Card sx={{ maxWidth: 420, width: '100%' }}>
-          <CardMedia component="img" image={album.coverImage} alt={album.title} />
+      <Stack
+        direction={{ xs: 'column', md: 'row' }}
+        spacing={3}
+        alignItems="flex-start"
+      >
+        <Card
+          sx={{
+            maxWidth: 420,
+            width: '100%',
+            aspectRatio: '1 / 1',
+            overflow: 'hidden',
+            flexShrink: 0,
+          }}
+        >
+          <CardMedia
+            component="img"
+            image={album.coverImage}
+            alt={album.title}
+            sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          />
         </Card>
         <Stack spacing={2} sx={{ flex: 1 }}>
           <Typography variant="h2">{album.title}</Typography>
           <Typography variant="body1" color="text.secondary">
             {album.artist} · {formatYear(album.year)}
           </Typography>
-          <Typography variant="body1">{album.description}</Typography>
-          <Box>
-            <Button variant="outlined" component={RouterLink} to="/albums">
-              Back to releases
-            </Button>
+          <Box
+            sx={{
+              color: 'text.primary',
+              '& h1': { typography: 'h4', mb: 1 },
+              '& h2': { typography: 'h6', mt: 2, mb: 1 },
+              '& p': { typography: 'body1', mt: 0, mb: 2 },
+              '& ol': { pl: 3, mt: 0, mb: 0 },
+              '& li': { typography: 'body1', mb: 0.5 },
+            }}
+          >
+            <ReactMarkdown>{album.description}</ReactMarkdown>
           </Box>
         </Stack>
       </Stack>

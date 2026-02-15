@@ -14,25 +14,20 @@ import { formatYear } from '../utils/formatters.js'
 function AlbumCard({ album }) {
   return (
     <Card>
-      <CardActionArea component={RouterLink} to={`/albums/${album.id}`}>
+      <CardActionArea component={RouterLink} to={`/albums/${album.id}`} sx={{ display: 'flex', flexDirection: { xs: 'row', md: 'column' }, justifyContent: 'flex-start' }}>
         <CardMedia
           component="img"
-          height="180"
+          sx={{ width: { xs: 100, md: '100%' }, height: { xs: 100, md: 180 }, flexShrink: 0 }}
           image={album.coverImage}
           alt={album.title}
         />
-        <CardContent>
+        <CardContent sx={{ textAlign: 'left' }}>
           <Stack spacing={1.5}>
             <Stack spacing={0.5}>
               <Typography variant="h6">{album.title}</Typography>
               <Typography variant="body2" color="text.secondary">
                 {album.artist} · {formatYear(album.year)}
               </Typography>
-            </Stack>
-            <Stack direction="row" spacing={1} flexWrap="wrap">
-              {album.tags.map((tag) => (
-                <Chip key={tag} label={tag} size="small" />
-              ))}
             </Stack>
           </Stack>
         </CardContent>

@@ -2,20 +2,20 @@ import { createTheme } from '@mui/material/styles'
 
 const theme = createTheme({
   palette: {
-    mode: 'light',
+    mode: 'dark',
     primary: {
-      main: '#0f3d3e',
+      main: '#4db8ba',
     },
     secondary: {
-      main: '#e77f5b',
+      main: '#ff9a76',
     },
     background: {
-      default: '#f7f2ec',
-      paper: '#ffffff',
+      default: '#0a0a0a',
+      paper: '#1a1a1a',
     },
     text: {
-      primary: '#14110f',
-      secondary: '#4b3f39',
+      primary: '#f0f0f0',
+      secondary: '#b0b0b0',
     },
   },
   typography: {
@@ -49,11 +49,11 @@ const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          background: 'rgba(247, 242, 236, 0.9)',
+          background: 'rgba(26, 26, 26, 0.9)',
           backdropFilter: 'blur(10px)',
-          color: '#14110f',
+          color: '#f0f0f0',
           boxShadow: 'none',
-          borderBottom: '1px solid rgba(20, 17, 15, 0.08)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
         },
       },
     },
@@ -68,8 +68,8 @@ const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          border: '1px solid rgba(20, 17, 15, 0.08)',
-          boxShadow: '0 24px 40px -32px rgba(16, 33, 33, 0.45)',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          boxShadow: '0 24px 40px -32px rgba(0, 0, 0, 0.6)',
         },
       },
     },

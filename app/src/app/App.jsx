@@ -10,39 +10,23 @@ import {
   Stack,
 } from '@mui/material'
 import routes from './routes.jsx'
+import logo from '../assets/logo.png'
 
 function App() {
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <AppBar position="sticky">
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
+        <Toolbar sx={{ justifyContent: { xs: 'center', md: 'space-between' } }}>
           <Stack direction="row" spacing={1} alignItems="center">
             <Box
               component="img"
-              src="/logo.png"
+              src={logo}
               alt="IV Room"
               sx={{ width: 36, height: 36, borderRadius: '50%' }}
             />
             <Typography variant="h6" sx={{ fontWeight: 700 }}>
               IV Room
             </Typography>
-          </Stack>
-          <Stack direction="row" spacing={1.5} alignItems="center">
-            <Button component={RouterLink} to="/" color="inherit">
-              Home
-            </Button>
-            <Button component={RouterLink} to="/albums" color="inherit">
-              Releases
-            </Button>
-            <Button
-              component="a"
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noreferrer"
-              color="inherit"
-            >
-              Follow
-            </Button>
           </Stack>
         </Toolbar>
       </AppBar>
@@ -54,31 +38,6 @@ function App() {
               <Route key={route.path} path={route.path} element={route.element} />
             ))}
           </Routes>
-        </Container>
-      </Box>
-
-      <Box
-        component="footer"
-        sx={{
-          borderTop: '1px solid rgba(20, 17, 15, 0.08)',
-          py: 3,
-          mt: 'auto',
-        }}
-      >
-        <Container maxWidth="lg">
-          <Stack
-            direction={{ xs: 'column', sm: 'row' }}
-            spacing={1}
-            justifyContent="space-between"
-            alignItems={{ xs: 'flex-start', sm: 'center' }}
-          >
-            <Typography variant="body2" color="text.secondary">
-              IV Room. Curated releases and immersive sound.
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Built for mobile-first listening.
-            </Typography>
-          </Stack>
         </Container>
       </Box>
     </Box>

@@ -1,57 +1,36 @@
+import lightSculpturesArtwork from '../assets/releases/light-sculptures-artwork.jpg'
+
 const albums = [
   {
-    id: 'iv-room-vol-1',
-    title: 'IV Room Vol. 1',
-    artist: 'IV Room',
-    year: 2024,
-    coverImage: '/logo.png',
-    tags: ['house', 'deep'],
-    description:
-      'A warm blend of late-night house with textured percussion and drifting pads.',
+    id: 'light-sculptures',
+    title: 'Light Sculptures',
+    artist: 'Samian',
+    artistUrl: 'https://www.mavelpoint.com/artist/samian',
+    year: 2026,
+    coverImage: lightSculpturesArtwork,
+    tags: ['melodic', 'techno', 'synthwave', 'indie-dance', 'minimal'],
+    description: `## Samian unveils Light Sculptures
+
+An exploration of identity and memories through sound.
+
+## Tracklist
+
+1. Light Sculptures
+2. Faded Moon
+3. Ilusion
+4. Mirage
+5. Siete Luces
+6. Liquid Love
+7. Adore
+8. Keep It Open
+9. Amanecer (from the archive)`,
     links: [
-      { label: 'Spotify', url: 'https://open.spotify.com', type: 'streaming' },
-      { label: 'Apple Music', url: 'https://music.apple.com', type: 'streaming' },
-      { label: 'YouTube Music', url: 'https://music.youtube.com', type: 'streaming' },
-      { label: 'Soundcloud', url: 'https://soundcloud.com', type: 'streaming' },
-      { label: 'Beatport', url: 'https://www.beatport.com', type: 'distribution' },
-      { label: 'Traxsource', url: 'https://www.traxsource.com', type: 'distribution' },
-      { label: 'Merch Shop', url: 'https://example.com', type: 'merch' },
-    ],
-  },
-  {
-    id: 'nocturne-drive',
-    title: 'Nocturne Drive',
-    artist: 'Aurora Link',
-    year: 2025,
-    coverImage: '/logo.png',
-    tags: ['tech', 'groove'],
-    description:
-      'Crystalline synths and hypnotic grooves designed for late-night sets.',
-    links: [
-      { label: 'Spotify', url: 'https://open.spotify.com', type: 'streaming' },
-      { label: 'Apple Music', url: 'https://music.apple.com', type: 'streaming' },
-      { label: 'YouTube Music', url: 'https://music.youtube.com', type: 'streaming' },
-      { label: 'Soundcloud', url: 'https://soundcloud.com', type: 'streaming' },
-      { label: 'Beatport', url: 'https://www.beatport.com', type: 'distribution' },
-      { label: 'Traxsource', url: 'https://www.traxsource.com', type: 'distribution' },
-    ],
-  },
-  {
-    id: 'glass-tension',
-    title: 'Glass Tension',
-    artist: 'Echo Relay',
-    year: 2023,
-    coverImage: '/logo.png',
-    tags: ['ambient', 'downtempo'],
-    description:
-      'Slow-burn ambience with intimate textures and cinematic depth.',
-    links: [
-      { label: 'Spotify', url: 'https://open.spotify.com', type: 'streaming' },
-      { label: 'Apple Music', url: 'https://music.apple.com', type: 'streaming' },
-      { label: 'YouTube Music', url: 'https://music.youtube.com', type: 'streaming' },
-      { label: 'Soundcloud', url: 'https://soundcloud.com', type: 'streaming' },
-      { label: 'Beatport', url: 'https://www.beatport.com', type: 'distribution' },
-      { label: 'Traxsource', url: 'https://www.traxsource.com', type: 'distribution' },
+      { label: 'Spotify', url: 'https://open.spotify.com/intl-es/album/38MlCVObiCIMUI7N6ZWqoI?si=WwqA1cxqTQyiQCqvhtfugA&nd=1&dlsi=0ac18de59610479d', type: 'streaming' },
+      { label: 'Apple Music', url: 'https://music.apple.com/mx/album/light-sculptures/1874809229', type: 'streaming' },
+      { label: 'YouTube Music', url: 'https://music.youtube.com/playlist?list=OLAK5uy_ljifz1HELPAX5kdvzulmMhd1JHMylTVGs', type: 'streaming' },
+      { label: 'Soundcloud', url: 'https://soundcloud.com/samianc', type: 'streaming' },
+      { label: 'Beatport', url: 'https://www.beatport.com/es/release/light-sculptures/5906636?utm_source=ios&utm_content=release&utm_medium=share', type: 'distribution' },
+      { label: 'Traxsource', url: 'https://www.traxsource.com/title/2720418/light-sculptures', type: 'distribution' },
     ],
   },
 ]
