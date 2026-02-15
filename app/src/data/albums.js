@@ -31,6 +31,7 @@ An exploration of identity and memories through sound.
       { label: 'Soundcloud', url: 'https://soundcloud.com/samianc', type: 'streaming' },
       { label: 'Beatport', url: 'https://www.beatport.com/es/release/light-sculptures/5906636?utm_source=ios&utm_content=release&utm_medium=share', type: 'distribution' },
       { label: 'Traxsource', url: 'https://www.traxsource.com/title/2720418/light-sculptures', type: 'distribution' },
+      { label: 'Vinyl', url: 'https://elasticstage.com/soundcloud/releases/samian-light-sculptures-album', type: 'distribution' },
     ],
   },
 ]
